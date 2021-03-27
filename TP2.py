@@ -78,7 +78,7 @@ def g7_2(x):
     return exp((7-3*x)/4)
 
 def g8_1(x):
-    return (2*(x**2) + 4*x + 17)**(1/4)
+    return (-2*(x**2) + 4*x + 17)**(1/4)
 
 def g8_2(x):
     return sqrt((x**4 + 4*x - 17)/2)
