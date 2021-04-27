@@ -5,17 +5,17 @@ from math import exp
 from math import log
 from math import acos
 from math import atan
-
 import matplotlib.pyplot as pp
 
-nliste = []
-xn = []
-en = []
+
 
 def Dichotomie(f, a0, b0, epsilon, Nitermax):
     n=0
     a = a0
     b = b0
+    nliste = []
+    xn = []
+    en = []
 
     while abs(b-a) > epsilon and n <= Nitermax:
         n += 1
@@ -36,6 +36,9 @@ def Secante(f, x0, x1, epsilon, Nitermax):
     n=0
     a = x0
     b = x1
+    nliste = []
+    xn = []
+    en = []
 
     while n <= Nitermax:
         x = b - ( b - a ) * f(b) / ( f(b) - f(a) )
@@ -54,6 +57,9 @@ def PointFixe(g, x0, epsilon, Nitermax):
     n=0
     xold = x0
     erreur = g(xold)-xold
+    nliste = []
+    xn = []
+    en = []
 
     while abs(erreur) > epsilon and n < Nitermax :
         xnew = g(xold)
@@ -71,6 +77,9 @@ def Newton(f, fder, x0, epsilon, Nitermax):
     n=0
     xold = x0
     erreur = -(f(xold)/(fder(xold)))
+    nliste = []
+    xn = []
+    en = []
 
     while abs(erreur) > epsilon and n < Nitermax :
         xnew = xold - f(xold)/fder(xold)
@@ -166,6 +175,7 @@ def grapheList(liste1,liste2,liste3,liste4,liste5,liste6,liste7,liste8):
     pp.ylabel("erreur")
     pp.title("L'erreur en fonction du n pour chaque méthode")
     pp.show()
+    
 
 
 
