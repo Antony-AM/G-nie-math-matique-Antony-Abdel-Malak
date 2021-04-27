@@ -182,6 +182,16 @@ def grapheList(liste1,liste2,liste3,liste4,liste5,liste6,liste7,liste8):
     pp.title("L'erreur en fonction du n pour chaque méthode")
     pp.show()
     
+def graphesemilogList(liste1,liste2,liste3,liste4,liste5,liste6,liste7,liste8):
+    pp.semilogy(liste1, liste2)
+    pp.semilogy(liste3, liste4)
+    pp.semilogy(liste5, liste6)
+    pp.semilogy(liste7, liste8)
+    pp.xlabel("n")
+    pp.ylabel("erreur")
+    pp.title("L'erreur en fonction du n pour chaque méthode")
+    pp.show()
+    
 
 
 
@@ -208,3 +218,4 @@ print ("Méthode de la Sécante :", 'alpha =', x_sec ,'et', n_sec, 'itérations'
 print ("Méthode de la Dichotomie :", 'alpha =', m_dic ,'et', n_dic, 'itérations')
 
 grapheList(nliste_fix, en_fix, nliste_new, en_new, nliste_sec, en_sec, nliste_dic, en_dic)
+graphesemilogList(nliste_fix, en_fix, nliste_new, en_new, nliste_sec, en_sec, nliste_dic, en_dic)
