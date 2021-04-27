@@ -1,3 +1,11 @@
+"""
+TP4 - Ma123  -  M.Laurent BLETZACKER
+Alexandre Jean-Philippe BESSON
+Antony ABDEL MALAK
+
+1-PT1
+"""
+
 from math import sin
 from math import cos
 from math import tan
@@ -6,8 +14,6 @@ from math import log
 from math import acos
 from math import atan
 import matplotlib.pyplot as pp
-
-
 
 def Dichotomie(f, a0, b0, epsilon, Nitermax):
     n=0
